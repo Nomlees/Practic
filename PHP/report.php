@@ -1,22 +1,18 @@
 <?php
 require "../includs/db.php";
-
 ?>
-<!DOCTYPE html>
 <html>
-<link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+<link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../CSS/head.css">
 <link rel="stylesheet" type="text/css" href="../CSS/header.css">
 <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
-<link rel="stylesheet" type="text/css" href="../CSS/head.css">
 <head>
 <meta charset = "UTF-8">
-	<title>Главная страница</title>
+	<title>Ищут дом</title>
 </head>
-
-   
 <body>
 <header>
-	<section class = "header">
+	<section class = "header">	
 		<img src="../img/logo.png" width="250" height="150">
 		<ul class = "head head-up">
 			<li><a href="main.php">Главная</a></li>		
@@ -39,7 +35,7 @@ require "../includs/db.php";
 	</section>
 </header>
 <!--Карточки животных-->
-<H3 align = "center" class = "funny-title section-title">Ждут помощи</H3>
+<H3 align = "center" class = "funny-title section-title">Нашли свой дом!</H3>
 <div>
 <?php  
 $count = 1;
@@ -56,12 +52,11 @@ while ($count<= 2){
 			<div>
 				<br>
 				<?php
-				$row = R::load('hospital', $id);
+				$row = R::load('report', $id);
 				echo "<img src='$row[img]'>"."<br>";
-				echo $row['name']."<br>".$row['disease']."<br>"; // работаем с данными, как с массивом
+				echo $row['name']."<br>".$row['story']."<br>"; // работаем с данными, как с массивом
 				$id++;
 ?>
-			<a href="pay.php" class="blubtn">Помочь</a>
 			</div>
 			<br>
 		</div>
@@ -74,8 +69,8 @@ $count++;
 $twoId = 8;
 				}
 ?>
-</div>
 
+</div>
 <footer class = "footer__menu">
 	<div class="grid_1">
 		<div class = "custom">
@@ -85,8 +80,8 @@ $twoId = 8;
 		<div>
 		<ul class="head head-up">
 			<li><a href="contact.php">Контакты</a></li>
-			<li><a href="contact.php">Ищут дом</a></li>
-			<li><a href="contact.php">Каталог товаров</a></li>
+			<li><a href="looking-for-home.php">Ищут дом</a></li>
+			<li><a href="main.php">Главная</a></li>
 		</ul>
 		</div>
 

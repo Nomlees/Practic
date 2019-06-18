@@ -1,0 +1,15 @@
+.count{
+	font-size: 18pt;
+}
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+/*Збс абзацы*/
+p {
+    background-color: rgb(230, 230, 250);
+    text-align: center;
+    margin-right:20%;
+    margin-left:20%;
+    font-size: 30px;
+}
