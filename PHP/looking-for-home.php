@@ -37,7 +37,10 @@ require "../includs/db.php";
 <!--Карточки животных-->
 <H3 align = "center" class = "funny-title section-title">Ищут дом</H3>
 <div>
-<?php  
+<?php 
+/*
+Вывод животных из БД
+*/
 $count = 1;
 $id = 1;
 $twoId = 4;
@@ -54,7 +57,7 @@ while ($count<= 2){
 				<?php
 				$row = R::load('animal', $id);
 				echo "<img src='$row[img]'>"."<br>";
-				echo $row['name']."<br>".$row['description']."<br>"; // работаем с данными, как с массивом
+				echo $row['name']."<br>".$row['description']."<br>"; 
 				$id++;
 ?>
 			<a href="pay.php" class="blubtn">Помочь</a>
